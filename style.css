@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #17141d;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.card-list {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: -1rem 0 3rem #000;
+
+  transition: 200ms ease;
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+    cursor: pointer;
+}
+
+.card:hover~.card{
+    transform: translateX(130px);
+}
+
+.card:not(:first-child){
+    margin-left: -130px;
+}
+
+.card-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.card-list::-webkit-scrollbar-thumb {
+  background: #201c29;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card-list::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.card-header h2:hover {
+    background: linear-gradient(90deg,#ff8a00,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
